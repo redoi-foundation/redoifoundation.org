@@ -1,20 +1,24 @@
-/*!   
- * Template Name: Atom - Bootstrap 5 Template for Marketing Mobile Apps
- * Version: 2.4
- * Author: Xiaoying Riley
- * Copyright: 3rd Wave Media Ltd.
- * Website: http://themes.3rdwavemedia.com/
- * Twitter: @3rdwave_themes
-*/
-/*************************** Theme Colours****************************/
-/*************************** Theme Styles ****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
 /* ======= Base ======= */
 html, body {
   height: 100%;
 }
 
 body {
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #666;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -43,8 +47,9 @@ a:focus {
 }
 
 .btn, a.btn {
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
+  text-transform: capitalize;
   background: none;
   cursor: pointer;
 }
@@ -67,13 +72,45 @@ a:focus {
 }
 
 a.btn-cta, .btn-cta {
-  padding: 8px 32px;
+  /* padding: 8px 32px; */
   text-decoration: none;
+}
+
+.buy-btn {
+  padding: 3px 10px;
+  margin: 8px;
+  position: relative;
+  background-color: #fff !important;
+  color: black !important;
+  float: right;
+  display: inline-flex;
+}
+.arrow-n-b {
+  background-image: url(../images/elements/arr_bl.png);
+  width: 25px;
+  height: 13px;
+  margin: 5px 0 0 10px;
+  display: inline-flex;
+}
+.arrow-n-b-tg {
+  background-image: url(../images/elements/arr_bl.png);
+  width: 25px;
+  height: 13px;
+  margin: 5px 0 0 10px;
+  display: inline-flex;
+}
+.arrow-n {
+  background-image: url(../images/elements/arr_wh.png);
+  width: 25px;
+  height: 13px;
+  margin: 5px 0 0 10px;
+  display: inline-flex;
 }
 
 a.btn-cta-primary, .btn-cta-primary {
   border: 1px solid #fff;
   color: #fff;
+  text-transform: capitalize;
   text-decoration: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -325,16 +362,37 @@ textarea.form-control {
 .device-carousel {
   margin-top: 20px;
 }
+
+.tg-btn {
+  /* padding: 3px 10px;
+    margin: 8px; */
+    font-size: 20px;
+  
+    background-color: #fff !important;
+    color: black !important;
+
+}
+.x-btn {
+  /* padding: 3px 10px;
+    margin: 8px; */
+    font-size: 20px;
+
+    color: #fff !important;
+
+}
 /* ======= Gradients ======= */
 .gradient-1 {
-  background-image: -webkit-linear-gradient(110deg, #30598d 10%, #080037 90%), url("../images/background/diamond_upholstery.png");
-  background-image: -moz-linear-gradient(110deg, #30598d 10%, #080037 90%), url("../images/background/diamond_upholstery.png");
-  background-image: -o-linear-gradient(110deg, #30598d 10%, #080037 90%), url("../images/background/diamond_upholstery.png");
-  background-image: linear-gradient(110deg, #30598d 10%, #080037 90%), url(../images/background/diamond_upholstery.png);
+  background-image: -webkit-linear-gradient(110deg, #30598d 10%, #080037 90%), url("../images/background/background_main.jpg");
+  background-image: -moz-linear-gradient(110deg, #30598d 10%, #080037 90%), url("../images/background/background_main.jpg");
+  background-image: -o-linear-gradient(110deg, #30598d 10%, #080037 90%), url("../images/background/background_main.jpg");
+  background-image: linear-gradient(110deg, #44342ea6 10%, #424242 90%), url(../images/background/background_main.jpg);
   background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 10+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$combo-1, endColorstr=$combo-2,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   background-blend-mode: multiply;
   color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .gradient-1.promo a {
   color: #02afff;
@@ -343,7 +401,7 @@ textarea.form-control {
   color: #009ee7;
 }
 .gradient-1.promo a.btn {
-  color: #fff !important;
+  /* color: #fff !important; */
 }
 
 .gradient-2 {
@@ -355,7 +413,8 @@ textarea.form-control {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$combo-3, endColorstr=$combo-4,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   background-blend-mode: multiply;
   color: #fff; 
-  background-color: #080033;
+  background-color: #000;
+  padding: 20px 0!important;
 }
 
 .gradient-3 {
@@ -603,6 +662,7 @@ textarea.form-control {
 
 /* ======= Header ======= */
 .header {
+  padding: 10px 0;
   height: 60px;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -619,13 +679,21 @@ textarea.form-control {
   color: #fff;
 }
 .header .logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  margin-top: 8px;
+  margin-left: 10px;
   position: relative;
   z-index: 10;
   display: inline-block;
+}
+.buy-box {
+  border: 1px solid #fff;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 .header .logo a {
   text-decoration: none;
@@ -658,17 +726,55 @@ textarea.form-control {
   font-size: 20px;
 }
 .header .navbar-wrapper {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: relative;
+  float:right;
+margin-top: 5px;
 }
-.header .navbar-wrapper .navbar-label {
+.header .navbar-wrapper p.navbar-label {
   color: rgba(255, 255, 255, 0.8);
-  font-weight: 700;
-  font-size: 14px;
+  border: 1px solid #fff;
+  margin-left: 5px;
+  padding:0 5px;
+  font-weight: 300;
+  font-size: 22px;
   position: relative;
   top: 2px;
   float: left;
+}
+.header .navbar-wrapper a.navbar-label {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+  border: 1px solid #fff;
+  margin-left: 5px;
+  padding:0 5px;
+  font-weight: 500;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  float: left;
+}
+#howitworks {
+  padding: 0!important;
+}
+.card1st {
+  background-image: linear-gradient(110deg, #44342ea6 10%, #424242 90%), url(../images/devices/road1st.jpg);
+  background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); 
+  background-blend-mode: multiply;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+}
+.card2nd {
+  background-image: linear-gradient(110deg, #44342ea6 10%, #424242 90%), url(../images/background/strat_eng.jpg);
+background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 10+ */
+  background-blend-mode: multiply; 
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
 }
 .header .navbar-wrapper:hover {
   cursor: pointer;
@@ -780,6 +886,13 @@ textarea.form-control {
   -webkit-animation: arrow-animation 750ms ease-in-out infinite alternate;
   -o-animation: arrow-animation 750ms ease-in-out infinite alternate;
 }
+
+.line {
+  width: 200px;
+  /* font-size: 1px; */
+  border-top: 1px solid #fff;
+  opacity: 1;
+}
 .promo .intro-area {
   z-index: 10;
   position: relative;
@@ -789,11 +902,13 @@ textarea.form-control {
 .promo .intro-area .title {
   margin-top: 0;
   margin-bottom: 15px;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 36px;
 }
 .promo .intro-area .intro {
   margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 300;
 }
 .promo .intro-area .intro a {
   color: #fff;
@@ -1991,7 +2106,7 @@ textarea.form-control {
 }
 .blog-post-wrapper .post-wrapper .comment-area .comment-form .error {
   color: #E65348;
-  font-family: arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: block;
   font-size: 14px;
   text-align: left;
@@ -2429,7 +2544,7 @@ textarea.form-control {
     right: 0;
   }
   .header {
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
   }
   .header .social-container {
     display: none;
@@ -2438,7 +2553,7 @@ textarea.form-control {
     padding-top: 0;
   }
   .promo .intro-area {
-    text-align: center;
+    text-align: left;
   }
   .promo .download-area {
     text-align: center;
@@ -2554,7 +2669,7 @@ textarea.form-control {
 }
 @media (min-width: 768px) {
   .header {
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
   }
   .promo .intro-area {
     text-align: center;
@@ -2605,7 +2720,7 @@ h1.road {
   content: "";
   position: absolute;
   width: 3px;
-  background-color: #26c6da;
+  background-color: white;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -2626,8 +2741,8 @@ h1.road {
   width: 25px;
   height: 25px;
   right: -11px;
-  background-color: #26c6da;
-  top: 15px;
+  background-color: white;
+  top: 50%;
   border-radius: 50%;
   z-index: 1;
 }
@@ -2644,8 +2759,8 @@ h1.road {
   left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
-.left-2::before {
+
+/* .left-2::before {
   content: " ";
   position: absolute;
   top: 18px;
@@ -2656,7 +2771,7 @@ h1.road {
   border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
+
 .right-2::before {
   content: " ";
   position: absolute;
@@ -2666,7 +2781,7 @@ h1.road {
   border: medium solid white;
   border-width: 10px 10px 10px 0;
   border-color: transparent white transparent transparent;
-}
+} */
 
 /* Fix the circle for containers on the right side */
 .right-2::after {
@@ -2715,4 +2830,9 @@ footer {
   
   text-align: center;
   padding: 10px 0;
+}
+
+.button-n {
+  text-transform: capitalize;
+
 }
