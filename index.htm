@@ -15,7 +15,12 @@
 
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-
+	<style>
+        .copy-text:hover {
+            cursor: pointer;
+            color: blue; 
+        }
+    </style>
 </head> 
 
 <body class="homepage">       	
@@ -50,7 +55,12 @@
 						<h2 class="title">REDO Invest</h2>
 						<p class="intro pl-lg-5">🚀 REDOI Investment Fund: We invest commissions in profitable projects! 💰<br><br>
 
-							We use the commissions from the buying and selling of the token to invest in projects across the entire TON ecosystem. 🌐<br><br>
+							We have a commission token: 5% for buying, 15% for selling. <br><br>
+
+The collected commissions are sent to all holders to their wallets automatically.<br><br>
+
+
+							We use the rest of comissions to invest in projects across the entire TON ecosystem. 🌐<br><br>
 							
 							The smart contract sends 60% to holders, while the rest goes to the Treasury. 💸<br><br>
 							
@@ -61,7 +71,7 @@
 							Treasury assets are never spent; only the income and token value increase! 💪🔥<br><br>
 						
 							🚀How to buy REDOI: go to the exchange section on STONFI, and import the token contract into the bottom window for the swap:<br>
-							EQCGyXsqrVyDMP0BZxS3i7Ke-zh9uoddVHETUggmPJMC2WXv
+							<p id="text-to-copy" class="copy-text">EQCGyXsqrVyDMP0BZxS3i7Ke-zh9uoddVHETUggmPJMC2WXv</p>
 						</p>
 						
            
@@ -211,7 +221,23 @@
 		<h5>&copy; REDOI foundation, 2024</h5>
 	</footer>
 	
+	<script>
+		document.getElementById('text-to-copy').addEventListener('click', function() {
+			// Get the text content of the paragraph
+			const text = this.textContent;
 	
+			// Use the Clipboard API to copy the text
+			navigator.clipboard.writeText(text)
+				.then(() => {
+					console.log('Text copied to clipboard');
+					// Optionally alert the user that text was copied
+					// alert('Text copied to clipboard!');
+				})
+				.catch(err => {
+					console.error('Failed to copy text: ', err);
+				});
+		});
+	</script>
 	
 	<!-- Main Javascript -->          
 

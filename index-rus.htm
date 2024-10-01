@@ -15,7 +15,12 @@
 
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-
+	<style>
+        .copy-text:hover {
+            cursor: pointer;
+            color: blue; 
+        }
+    </style>
 </head> 
 
 <body class="homepage">       	
@@ -48,7 +53,11 @@
 						<h2 class="title">REDO Invest</h2>
 						<p class="intro pl-lg-5">🚀 Инвестфонд REDOI: вкладываем комиссии в доходные проекты! 💰<br><br>
 
-							Мы используем комиссии с покупки и продажи токена для инвестирования в проекты всей экосистемы TON. 🌐<br><br>
+							У нас - комиссионный токен: 5% на покупку, 15% на продаж<br><br>
+
+							Собранные комиссии рассылаются всем холдерам на их кошельки автоматически.<br><br>
+
+							Остаток комиссий мы используем  для инвестирования в проекты всей экосистемы TON. 🌐<br><br>
 							
 							Смарт-контракт отправляет холдерам 60%, остальное идет в Treasury. 💸<br><br>
 							
@@ -58,7 +67,10 @@
 							
 							Активы Treasury никогда не тратятся, только увеличивается доход и стоимость токена! 💪🔥<br><br>
 							
-							Как купить REDOI: заходим на STONFI в раздел обмена, и импортируем контракт токена в нижнее окошко для свопа:  EQCGyXsqrVyDMP0BZxS3i7Ke-zh9uoddVHETUggmPJMC2WXv</p>
+							Как купить REDOI: заходим на STONFI в раздел обмена, и импортируем контракт токена в нижнее окошко для свопа:  
+							<p id="text-to-copy" class="copy-text">EQCGyXsqrVyDMP0BZxS3i7Ke-zh9uoddVHETUggmPJMC2WXv</p>
+						
+						</p>
 						
            
 						<div class="butts"><a class="btn btn-cta btn-cta-primary" href="https://x.com/redoinveston" >Мы в X</a></div>
@@ -208,7 +220,23 @@
 	<footer class="gradient-1">
 		<h5>&copy; REDOI foundation, 2024</h5>
 	</footer>
+	<script>
+		document.getElementById('text-to-copy').addEventListener('click', function() {
+			// Get the text content of the paragraph
+			const text = this.textContent;
 	
+			// Use the Clipboard API to copy the text
+			navigator.clipboard.writeText(text)
+				.then(() => {
+					console.log('Text copied to clipboard');
+					// Optionally alert the user that text was copied
+					// alert('Text copied to clipboard!');
+				})
+				.catch(err => {
+					console.error('Failed to copy text: ', err);
+				});
+		});
+	</script>
 	
 	
 	<!-- Main Javascript -->          
