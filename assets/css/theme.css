@@ -764,7 +764,8 @@ margin-top: 5px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 300px;
+  height: auto;
+  padding-bottom: 20px;
 }
 .card2nd {
   background-image: linear-gradient(110deg, #44342ea6 10%, #424242 90%), url(../images/background/strat_eng.jpg);
@@ -774,14 +775,54 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 300px;
+  height: auto;
+  padding-bottom: 50px!important;
 }
+.rd1st {
+  background-image: linear-gradient(110deg, #44342ea6 10%, #424242 90%), url(../images/devices/road2nd.jpg);
+background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 10+ */
+  background-blend-mode: multiply; 
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: auto;
+  padding-bottom: 50px!important;
+}
+.rd2nd {
+  background-image: linear-gradient(110deg, #44342ea6 10%, #424242 90%), url(../images/devices/road3rd.jpg);
+background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 10+ */
+  background-blend-mode: multiply; 
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: auto;
+  padding-bottom: 50px!important;
+}
+.rd3rd {
+  background-image: linear-gradient(110deg, #44342ea6 10%, #424242 90%), url(../images/devices/slide-3.png);
+background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 10+ */
+  background-blend-mode: multiply; 
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+  height: auto;
+  padding-bottom: 50px!important;
+}
+.more {
+  position: absolute;
+  left: 30px;
+  bottom: 10px;
+}
+
 .header .navbar-wrapper:hover {
   cursor: pointer;
 }
-.header .navbar-wrapper:hover .navbar-label {
+/* .header .navbar-wrapper:hover .navbar-label {
   color: #fff;
-}
+} */
 .header .navbar-wrapper:hover button {
   cursor: pointer;
 }
@@ -892,6 +933,8 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
   /* font-size: 1px; */
   border-top: 1px solid #fff;
   opacity: 1;
+  text-align: right;
+  display: inline-flex;
 }
 .promo .intro-area {
   z-index: 10;
@@ -2317,7 +2360,11 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
   border: none;
 }
 .modal.modal-member .modal-body {
-  padding: 30px;
+  /* padding: 30px; */
+}
+.modal.modal-member .modal-body img{
+  /* padding: 30px; */
+  width:100%;
 }
 .modal.modal-member .modal-body .figure {
   margin-bottom: 30px;
@@ -2345,16 +2392,16 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
   border: none;
 }
 .modal.modal-login .modal-body, .modal.modal-signup .modal-body {
-  padding: 30px;
+  /* padding: 30px; */
 }
 .modal.modal-login .modal-body .title, .modal.modal-signup .modal-body .title {
-  margin-top: 0;
+  /* margin-top: 0;
   margin-bottom: 30px;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 300; */
 }
 .modal.modal-login .modal-footer, .modal.modal-signup .modal-footer {
-  padding: 30px;
+  /* padding: 30px;
   background: #fff;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 4px;
@@ -2371,7 +2418,7 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  text-align: center;
+  text-align: center; */
 }
 .modal.modal-login .modal-footer p, .modal.modal-signup .modal-footer p {
   color: #666;
@@ -2380,6 +2427,12 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
 }
 .modal.modal-login .modal-footer a, .modal.modal-signup .modal-footer a {
   color: #5d8098;
+}
+.modal.modal-login .modal-footer a, .modal.modal-more .modal-body {
+  padding: 0;
+}
+.modal.modal-login .modal-footer a, .modal.modal-more .modal-body img{
+  width:100%;
 }
 .modal.modal-login .modal-footer a:hover, .modal.modal-signup .modal-footer a:hover {
   color: #4a6578;
@@ -2552,6 +2605,10 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
   .promo .intro-area {
     padding-top: 0;
   }
+  .line {
+    text-align: left;
+
+  }
   .promo .intro-area {
     text-align: left;
   }
@@ -2671,6 +2728,10 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
   .header {
     /* background: rgba(0, 0, 0, 0.3); */
   }
+  .line {
+    text-align: center;
+
+  }
   .promo .intro-area {
     text-align: center;
     margin-bottom: 90px;
@@ -2682,6 +2743,10 @@ background-image: -ms-linear-gradient(110deg, #30598d 10%, #080037 90%); /* IE 1
 @media (min-width: 992px) {
   .header {
     background: none;
+  }
+  .line {
+
+    text-align: right;
   }
   .promo .intro-area {
     text-align: right;
@@ -2725,6 +2790,7 @@ h1.road {
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  margin-bottom: 50px;
 }
 
 /* Container around content */
@@ -2835,4 +2901,8 @@ footer {
 .button-n {
   text-transform: capitalize;
 
+}
+
+.rmap {
+  padding-left: 50px;
 }
