@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "ton-client-js": "^0.28.1"
+  }
+}
