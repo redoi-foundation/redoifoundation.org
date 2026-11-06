@@ -1,0 +1,6 @@
+exclude:
+  - backup
+  - new
+  - node_modules
+  - package.json
+  - package-lock.json
